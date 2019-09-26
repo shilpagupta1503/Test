@@ -9,9 +9,11 @@ public class Fon_ApplyCredits {
         if(String.isNotBlank(FinalString)){
             List<String> splitSalesOrderIds = FinalString.split(',');
             salesOrderIds = new Set<String>(splitSalesOrderIds);
+
         }
         for(String ss:salesOrderIds){
             finalSo.add(ss.trim());
+            System.debug('Testing is done');
         }
         if(!finalSo.isEmpty()){
             String newBatchRecordId = createBatchRecord(system.today());

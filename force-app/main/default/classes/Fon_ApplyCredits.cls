@@ -13,11 +13,12 @@ public class Fon_ApplyCredits {
         }
         for(String ss:salesOrderIds){
             finalSo.add(ss.trim());
-            System.debug('Testing is done');
+            
         }
         if(!finalSo.isEmpty()){
             String newBatchRecordId = createBatchRecord(system.today());
             Database.executeBatch(new Fon_UpdateInvoiceBatch(finalSo,newBatchRecordId),1);
+            System.debug('Hello');
         }
     }
     public static String createBatchRecord(Date currentDate){

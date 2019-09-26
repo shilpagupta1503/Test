@@ -18,7 +18,7 @@ public class Fon_ApplyCredits {
         if(!finalSo.isEmpty()){
             String newBatchRecordId = createBatchRecord(system.today());
             Database.executeBatch(new Fon_UpdateInvoiceBatch(finalSo,newBatchRecordId),1);
-            System.debug('Hello');
+            System.debug('Hellotest');
         }
     }
     public static String createBatchRecord(Date currentDate){

@@ -12,6 +12,7 @@ public class Fon_ApplyCredits {
         }
         for(String ss:salesOrderIds){
             finalSo.add(ss.trim());
+            System.debug('Test');
         }
         if(!finalSo.isEmpty()){
             String newBatchRecordId = createBatchRecord(system.today());
